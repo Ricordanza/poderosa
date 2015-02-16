@@ -19,6 +19,7 @@ namespace Poderosa.PortForwarding {
         private Hashtable _menuMap;
 
         private System.Windows.Forms.ListView _list;
+        private System.Windows.Forms.ColumnHeader _nameColumn;
         private System.Windows.Forms.ColumnHeader _sshHostColumn;
         private System.Windows.Forms.ColumnHeader _accountColumn;
         private System.Windows.Forms.ColumnHeader _typeColumn;
@@ -87,6 +88,7 @@ namespace Poderosa.PortForwarding {
             this.components = new System.ComponentModel.Container();
             System.Resources.ResourceManager resources = new System.Resources.ResourceManager(typeof(MainForm));
             this._list = new System.Windows.Forms.ListView();
+            this._nameColumn = new System.Windows.Forms.ColumnHeader();
             this._sshHostColumn = new System.Windows.Forms.ColumnHeader();
             this._accountColumn = new System.Windows.Forms.ColumnHeader();
             this._typeColumn = new System.Windows.Forms.ColumnHeader();
@@ -119,6 +121,7 @@ namespace Poderosa.PortForwarding {
             // _list
             // 
             this._list.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+                this._nameColumn,
                 this._sshHostColumn,
                 this._accountColumn,
                 this._typeColumn,
@@ -139,6 +142,10 @@ namespace Poderosa.PortForwarding {
             this._list.DoubleClick += new System.EventHandler(this.OnListViewDoubleClicked);
             this._list.MouseUp += new System.Windows.Forms.MouseEventHandler(this.OnListViewMouseUp);
             this._list.SelectedIndexChanged += new System.EventHandler(this.OnSelectedIndexChanged);
+            // 
+            // _nameColumn
+            // 
+            this._nameColumn.Width = 150;
             // 
             // _sshHostColumn
             // 
@@ -273,7 +280,7 @@ namespace Poderosa.PortForwarding {
             // MainForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-            this.ClientSize = new System.Drawing.Size(504, 345);
+            this.ClientSize = new System.Drawing.Size(520, 345);
             this.Controls.Add(this._list);
             this.Controls.Add(_mainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -288,6 +295,7 @@ namespace Poderosa.PortForwarding {
         #endregion
 
         private void InitializeText() {
+            this._nameColumn.Text = Env.Strings.GetString("Form.MainForm._nameColumn");
             this._sshHostColumn.Text = Env.Strings.GetString("Form.MainForm._sshHostColumn");
             this._accountColumn.Text = Env.Strings.GetString("Form.MainForm._accountColumn");
             this._typeColumn.Text = Env.Strings.GetString("Form.MainForm._typeColumn");
@@ -470,7 +478,8 @@ namespace Poderosa.PortForwarding {
             foreach (ChannelProfile prof in Env.Profiles) {
                 string port_postfix = prof.ProtocolType == ProtocolType.Udp ? "(UDP)" : "";
                 ListViewItem li = new ListViewItem();
-                li.Text = prof.SSHHost;
+                li.Text = prof.Name;
+                li.SubItems.Add(prof.SSHHost);
                 li.SubItems.Add(prof.SSHAccount);
                 li.SubItems.Add(Util.GetProfileTypeString(prof));
                 li.SubItems.Add(prof.ListenPort.ToString() + port_postfix);

@@ -52,6 +52,8 @@ namespace Poderosa.PortForwarding {
         private CheckBox _loopbackOnly;
         private System.Windows.Forms.Button _okButton;
         private System.Windows.Forms.Button _cancelButton;
+        private TextBox _nameBox;
+        private Label _nameLabel;
         /// <summary>
         /// 必要なデザイナ変数です。
         /// </summary>
@@ -89,45 +91,50 @@ namespace Poderosa.PortForwarding {
         /// </summary>
         private void InitializeComponent() {
             this._sshHostLabel = new System.Windows.Forms.Label();
-            this._sshHostBox = new TextBox();
+            this._sshHostBox = new System.Windows.Forms.TextBox();
             this._portLabel = new System.Windows.Forms.Label();
-            this._portBox = new TextBox();
+            this._portBox = new System.Windows.Forms.TextBox();
             this._accountLabel = new System.Windows.Forms.Label();
-            this._accountBox = new TextBox();
-            this._authTypeGroup = new GroupBox();
-            this._authTypeLabel = new Label();
-            this._passwordOption = new RadioButton();
-            this._publicKeyOption = new RadioButton();
-            this._privateKeyLabel = new Label();
-            this._privateKeyBox = new TextBox();
-            this._privateKeySelectButton = new Button();
+            this._accountBox = new System.Windows.Forms.TextBox();
+            this._authTypeGroup = new System.Windows.Forms.GroupBox();
+            this._passwordOption = new System.Windows.Forms.RadioButton();
+            this._publicKeyOption = new System.Windows.Forms.RadioButton();
+            this._privateKeyLabel = new System.Windows.Forms.Label();
+            this._privateKeyBox = new System.Windows.Forms.TextBox();
+            this._privateKeySelectButton = new System.Windows.Forms.Button();
+            this._authTypeLabel = new System.Windows.Forms.Label();
             this._localToRemoteOption = new System.Windows.Forms.RadioButton();
             this._localToRemoteGroup = new System.Windows.Forms.GroupBox();
             this._LRLocalPortLabel = new System.Windows.Forms.Label();
-            this._LRLocalPortBox = new TextBox();
-            this._LRIPv6 = new CheckBox();
+            this._LRLocalPortBox = new System.Windows.Forms.TextBox();
+            this._LRIPv6 = new System.Windows.Forms.CheckBox();
             this._LRRemoteHostLabel = new System.Windows.Forms.Label();
-            this._LRRemoteHostBox = new TextBox();
+            this._LRRemoteHostBox = new System.Windows.Forms.TextBox();
             this._LRRemotePortLabel = new System.Windows.Forms.Label();
-            this._LRRemotePortBox = new TextBox();
+            this._LRRemotePortBox = new System.Windows.Forms.TextBox();
             this._remoteToLocalOption = new System.Windows.Forms.RadioButton();
             this._remoteToLocalGroup = new System.Windows.Forms.GroupBox();
-            this._RLRemotePortLabel = new System.Windows.Forms.Label();
-            this._RLRemotePortBox = new TextBox();
-            this._RLLocalHostLabel = new System.Windows.Forms.Label();
-            this._RLLocalHostBox = new TextBox();
             this._RLLocalPortLabel = new System.Windows.Forms.Label();
-            this._RLLocalPortBox = new TextBox();
-            this._optionGroup = new GroupBox();
-            this._loopbackOnly = new CheckBox();
+            this._RLLocalPortBox = new System.Windows.Forms.TextBox();
+            this._RLLocalHostLabel = new System.Windows.Forms.Label();
+            this._RLLocalHostBox = new System.Windows.Forms.TextBox();
+            this._RLRemotePortLabel = new System.Windows.Forms.Label();
+            this._RLRemotePortBox = new System.Windows.Forms.TextBox();
+            this._optionGroup = new System.Windows.Forms.GroupBox();
+            this._loopbackOnly = new System.Windows.Forms.CheckBox();
             this._okButton = new System.Windows.Forms.Button();
             this._cancelButton = new System.Windows.Forms.Button();
+            this._nameBox = new System.Windows.Forms.TextBox();
+            this._nameLabel = new System.Windows.Forms.Label();
+            this._authTypeGroup.SuspendLayout();
             this._localToRemoteGroup.SuspendLayout();
+            this._remoteToLocalGroup.SuspendLayout();
+            this._optionGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // _sshHostLabel
             // 
-            this._sshHostLabel.Location = new System.Drawing.Point(8, 8);
+            this._sshHostLabel.Location = new System.Drawing.Point(8, 33);
             this._sshHostLabel.Name = "_sshHostLabel";
             this._sshHostLabel.Size = new System.Drawing.Size(80, 23);
             this._sshHostLabel.TabIndex = 0;
@@ -135,15 +142,14 @@ namespace Poderosa.PortForwarding {
             // 
             // _sshHostBox
             // 
-            this._sshHostBox.Location = new System.Drawing.Point(104, 8);
+            this._sshHostBox.Location = new System.Drawing.Point(104, 33);
             this._sshHostBox.Name = "_sshHostBox";
             this._sshHostBox.Size = new System.Drawing.Size(136, 19);
             this._sshHostBox.TabIndex = 1;
-            this._sshHostBox.Text = "";
             // 
             // _portLabel
             // 
-            this._portLabel.Location = new System.Drawing.Point(248, 8);
+            this._portLabel.Location = new System.Drawing.Point(248, 33);
             this._portLabel.Name = "_portLabel";
             this._portLabel.Size = new System.Drawing.Size(80, 23);
             this._portLabel.TabIndex = 2;
@@ -151,7 +157,7 @@ namespace Poderosa.PortForwarding {
             // 
             // _portBox
             // 
-            this._portBox.Location = new System.Drawing.Point(336, 8);
+            this._portBox.Location = new System.Drawing.Point(336, 33);
             this._portBox.Name = "_portBox";
             this._portBox.Size = new System.Drawing.Size(40, 19);
             this._portBox.TabIndex = 3;
@@ -159,7 +165,7 @@ namespace Poderosa.PortForwarding {
             // 
             // _accountLabel
             // 
-            this._accountLabel.Location = new System.Drawing.Point(8, 32);
+            this._accountLabel.Location = new System.Drawing.Point(8, 57);
             this._accountLabel.Name = "_accountLabel";
             this._accountLabel.Size = new System.Drawing.Size(80, 23);
             this._accountLabel.TabIndex = 4;
@@ -167,78 +173,83 @@ namespace Poderosa.PortForwarding {
             // 
             // _accountBox
             // 
-            this._accountBox.Location = new System.Drawing.Point(104, 32);
+            this._accountBox.Location = new System.Drawing.Point(104, 57);
             this._accountBox.Name = "_accountBox";
             this._accountBox.Size = new System.Drawing.Size(136, 19);
             this._accountBox.TabIndex = 5;
-            this._accountBox.Text = "";
-            //
+            // 
             // _authTypeGroup
-            //
-            this._authTypeGroup.Controls.Add(_passwordOption);
-            this._authTypeGroup.Controls.Add(_publicKeyOption);
-            this._authTypeGroup.Controls.Add(_privateKeyLabel);
-            this._authTypeGroup.Controls.Add(_privateKeyBox);
-            this._authTypeGroup.Controls.Add(_privateKeySelectButton);
-            this._authTypeGroup.Location = new System.Drawing.Point(8, 56);
+            // 
+            this._authTypeGroup.Controls.Add(this._passwordOption);
+            this._authTypeGroup.Controls.Add(this._publicKeyOption);
+            this._authTypeGroup.Controls.Add(this._privateKeyLabel);
+            this._authTypeGroup.Controls.Add(this._privateKeyBox);
+            this._authTypeGroup.Controls.Add(this._privateKeySelectButton);
+            this._authTypeGroup.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._authTypeGroup.Location = new System.Drawing.Point(8, 81);
             this._authTypeGroup.Name = "_authTypeGroup";
             this._authTypeGroup.Size = new System.Drawing.Size(384, 72);
             this._authTypeGroup.TabIndex = 7;
-            this._authTypeGroup.FlatStyle = FlatStyle.System;
             this._authTypeGroup.TabStop = false;
-            //
+            // 
             // _passwordOption
-            //
+            // 
+            this._passwordOption.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._passwordOption.Location = new System.Drawing.Point(8, 16);
             this._passwordOption.Name = "_passwordOption";
-            this._passwordOption.FlatStyle = FlatStyle.System;
             this._passwordOption.Size = new System.Drawing.Size(120, 24);
             this._passwordOption.TabIndex = 0;
-            this._passwordOption.CheckedChanged += new EventHandler(OnAuthTypeChanged);
-            //
+            this._passwordOption.CheckedChanged += new System.EventHandler(this.OnAuthTypeChanged);
+            // 
             // _publicKeyOption
-            //
+            // 
+            this._publicKeyOption.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._publicKeyOption.Location = new System.Drawing.Point(128, 16);
             this._publicKeyOption.Name = "_publicKeyOption";
-            this._publicKeyOption.FlatStyle = FlatStyle.System;
             this._publicKeyOption.Size = new System.Drawing.Size(120, 24);
             this._publicKeyOption.TabIndex = 1;
-            this._publicKeyOption.CheckedChanged += new EventHandler(OnAuthTypeChanged);
-            //
+            this._publicKeyOption.CheckedChanged += new System.EventHandler(this.OnAuthTypeChanged);
+            // 
             // _privateKeyLabel
-            //
+            // 
             this._privateKeyLabel.Location = new System.Drawing.Point(8, 40);
             this._privateKeyLabel.Name = "_privateKeyLabel";
             this._privateKeyLabel.Size = new System.Drawing.Size(112, 23);
             this._privateKeyLabel.TabIndex = 2;
             this._privateKeyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // _privateKeyBox
-            //
+            // 
             this._privateKeyBox.Location = new System.Drawing.Point(120, 40);
             this._privateKeyBox.Name = "_privateKeyBox";
             this._privateKeyBox.Size = new System.Drawing.Size(240, 19);
             this._privateKeyBox.TabIndex = 3;
-            this._privateKeyBox.Text = "";
-            //
+            // 
             // _privateKeySelectButton
-            //
+            // 
+            this._privateKeySelectButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._privateKeySelectButton.Location = new System.Drawing.Point(360, 40);
             this._privateKeySelectButton.Name = "_privateKeySelectButton";
-            this._privateKeySelectButton.FlatStyle = FlatStyle.System;
             this._privateKeySelectButton.Size = new System.Drawing.Size(19, 19);
             this._privateKeySelectButton.TabIndex = 4;
             this._privateKeySelectButton.Text = "...";
-            this._privateKeySelectButton.Click += new EventHandler(OnSelectPrivateKey);
+            this._privateKeySelectButton.Click += new System.EventHandler(this.OnSelectPrivateKey);
+            // 
+            // _authTypeLabel
+            // 
+            this._authTypeLabel.Location = new System.Drawing.Point(0, 0);
+            this._authTypeLabel.Name = "_authTypeLabel";
+            this._authTypeLabel.Size = new System.Drawing.Size(100, 23);
+            this._authTypeLabel.TabIndex = 0;
             // 
             // _localToRemoteOption
             // 
-            this._localToRemoteOption.Location = new System.Drawing.Point(16, 132);
+            this._localToRemoteOption.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._localToRemoteOption.Location = new System.Drawing.Point(16, 157);
             this._localToRemoteOption.Name = "_localToRemoteOption";
-            this._localToRemoteOption.FlatStyle = FlatStyle.System;
             this._localToRemoteOption.Size = new System.Drawing.Size(264, 24);
             this._localToRemoteOption.TabIndex = 8;
-            this._localToRemoteOption.CheckedChanged += new EventHandler(OnGroupCheckChanged);
+            this._localToRemoteOption.CheckedChanged += new System.EventHandler(this.OnGroupCheckChanged);
             // 
             // _localToRemoteGroup
             // 
@@ -249,11 +260,11 @@ namespace Poderosa.PortForwarding {
             this._localToRemoteGroup.Controls.Add(this._LRRemoteHostBox);
             this._localToRemoteGroup.Controls.Add(this._LRRemotePortLabel);
             this._localToRemoteGroup.Controls.Add(this._LRRemotePortBox);
-            this._localToRemoteGroup.Location = new System.Drawing.Point(8, 136);
+            this._localToRemoteGroup.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._localToRemoteGroup.Location = new System.Drawing.Point(8, 161);
             this._localToRemoteGroup.Name = "_localToRemoteGroup";
             this._localToRemoteGroup.Size = new System.Drawing.Size(384, 104);
             this._localToRemoteGroup.TabIndex = 9;
-            this._localToRemoteGroup.FlatStyle = FlatStyle.System;
             this._localToRemoteGroup.TabStop = false;
             // 
             // _LRLocalPortLabel
@@ -270,13 +281,12 @@ namespace Poderosa.PortForwarding {
             this._LRLocalPortBox.Name = "_LRLocalPortBox";
             this._LRLocalPortBox.Size = new System.Drawing.Size(40, 19);
             this._LRLocalPortBox.TabIndex = 1;
-            this._LRLocalPortBox.Text = "";
             // 
             // _LRIPv6
             // 
+            this._LRIPv6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._LRIPv6.Location = new System.Drawing.Point(208, 24);
             this._LRIPv6.Name = "_LRIPv6";
-            this._LRIPv6.FlatStyle = FlatStyle.System;
             this._LRIPv6.Size = new System.Drawing.Size(120, 19);
             this._LRIPv6.TabIndex = 2;
             // 
@@ -294,7 +304,6 @@ namespace Poderosa.PortForwarding {
             this._LRRemoteHostBox.Name = "_LRRemoteHostBox";
             this._LRRemoteHostBox.Size = new System.Drawing.Size(144, 19);
             this._LRRemoteHostBox.TabIndex = 4;
-            this._LRRemoteHostBox.Text = "";
             // 
             // _LRRemotePortLabel
             // 
@@ -310,16 +319,15 @@ namespace Poderosa.PortForwarding {
             this._LRRemotePortBox.Name = "_LRRemotePortBox";
             this._LRRemotePortBox.Size = new System.Drawing.Size(40, 19);
             this._LRRemotePortBox.TabIndex = 6;
-            this._LRRemotePortBox.Text = "";
             // 
             // _remoteToLocalOption
             // 
-            this._remoteToLocalOption.Location = new System.Drawing.Point(16, 244);
+            this._remoteToLocalOption.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._remoteToLocalOption.Location = new System.Drawing.Point(16, 269);
             this._remoteToLocalOption.Name = "_remoteToLocalOption";
-            this._remoteToLocalOption.FlatStyle = FlatStyle.System;
             this._remoteToLocalOption.Size = new System.Drawing.Size(264, 24);
             this._remoteToLocalOption.TabIndex = 10;
-            this._remoteToLocalOption.CheckedChanged += new EventHandler(OnGroupCheckChanged);
+            this._remoteToLocalOption.CheckedChanged += new System.EventHandler(this.OnGroupCheckChanged);
             // 
             // _remoteToLocalGroup
             // 
@@ -329,28 +337,27 @@ namespace Poderosa.PortForwarding {
             this._remoteToLocalGroup.Controls.Add(this._RLLocalHostBox);
             this._remoteToLocalGroup.Controls.Add(this._RLRemotePortLabel);
             this._remoteToLocalGroup.Controls.Add(this._RLRemotePortBox);
-            this._remoteToLocalGroup.Location = new System.Drawing.Point(8, 248);
+            this._remoteToLocalGroup.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._remoteToLocalGroup.Location = new System.Drawing.Point(8, 273);
             this._remoteToLocalGroup.Name = "_remoteToLocalGroup";
             this._remoteToLocalGroup.Size = new System.Drawing.Size(384, 104);
             this._remoteToLocalGroup.TabIndex = 11;
-            this._remoteToLocalGroup.FlatStyle = FlatStyle.System;
             this._remoteToLocalGroup.TabStop = false;
             // 
-            // _RLRemotePortLabel
+            // _RLLocalPortLabel
             // 
-            this._RLRemotePortLabel.Location = new System.Drawing.Point(8, 24);
-            this._RLRemotePortLabel.Name = "_RLRemotePortLabel";
-            this._RLRemotePortLabel.Size = new System.Drawing.Size(144, 23);
-            this._RLRemotePortLabel.TabIndex = 0;
-            this._RLRemotePortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._RLLocalPortLabel.Location = new System.Drawing.Point(8, 72);
+            this._RLLocalPortLabel.Name = "_RLLocalPortLabel";
+            this._RLLocalPortLabel.Size = new System.Drawing.Size(144, 23);
+            this._RLLocalPortLabel.TabIndex = 5;
+            this._RLLocalPortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // _RLRemotePortBox
+            // _RLLocalPortBox
             // 
-            this._RLRemotePortBox.Location = new System.Drawing.Point(160, 24);
-            this._RLRemotePortBox.Name = "_RLRemotePortBox";
-            this._RLRemotePortBox.Size = new System.Drawing.Size(40, 19);
-            this._RLRemotePortBox.TabIndex = 1;
-            this._RLRemotePortBox.Text = "";
+            this._RLLocalPortBox.Location = new System.Drawing.Point(160, 72);
+            this._RLLocalPortBox.Name = "_RLLocalPortBox";
+            this._RLLocalPortBox.Size = new System.Drawing.Size(40, 19);
+            this._RLLocalPortBox.TabIndex = 6;
             // 
             // _RLLocalHostLabel
             // 
@@ -368,65 +375,81 @@ namespace Poderosa.PortForwarding {
             this._RLLocalHostBox.TabIndex = 4;
             this._RLLocalHostBox.Text = "localhost";
             // 
-            // _RLLocalPortLabel
+            // _RLRemotePortLabel
             // 
-            this._RLLocalPortLabel.Location = new System.Drawing.Point(8, 72);
-            this._RLLocalPortLabel.Name = "_RLLocalPortLabel";
-            this._RLLocalPortLabel.Size = new System.Drawing.Size(144, 23);
-            this._RLLocalPortLabel.TabIndex = 5;
-            this._RLLocalPortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this._RLRemotePortLabel.Location = new System.Drawing.Point(8, 24);
+            this._RLRemotePortLabel.Name = "_RLRemotePortLabel";
+            this._RLRemotePortLabel.Size = new System.Drawing.Size(144, 23);
+            this._RLRemotePortLabel.TabIndex = 0;
+            this._RLRemotePortLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // _RLLocalPortBox
+            // _RLRemotePortBox
             // 
-            this._RLLocalPortBox.Location = new System.Drawing.Point(160, 72);
-            this._RLLocalPortBox.Name = "_RLLocalPortBox";
-            this._RLLocalPortBox.Size = new System.Drawing.Size(40, 19);
-            this._RLLocalPortBox.TabIndex = 6;
-            this._RLLocalPortBox.Text = "";
+            this._RLRemotePortBox.Location = new System.Drawing.Point(160, 24);
+            this._RLRemotePortBox.Name = "_RLRemotePortBox";
+            this._RLRemotePortBox.Size = new System.Drawing.Size(40, 19);
+            this._RLRemotePortBox.TabIndex = 1;
             // 
             // _optionGroup
             // 
             this._optionGroup.Controls.Add(this._loopbackOnly);
-            this._optionGroup.Location = new System.Drawing.Point(8, 360);
+            this._optionGroup.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._optionGroup.Location = new System.Drawing.Point(8, 385);
             this._optionGroup.Name = "_optionGroup";
             this._optionGroup.Size = new System.Drawing.Size(384, 64);
             this._optionGroup.TabIndex = 12;
-            this._optionGroup.FlatStyle = FlatStyle.System;
             this._optionGroup.TabStop = false;
             // 
             // _loopbackOnly
             // 
+            this._loopbackOnly.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this._loopbackOnly.Location = new System.Drawing.Point(8, 16);
             this._loopbackOnly.Name = "_loopbackOnly";
-            this._loopbackOnly.FlatStyle = FlatStyle.System;
             this._loopbackOnly.Size = new System.Drawing.Size(288, 19);
             this._loopbackOnly.TabIndex = 1;
             // 
             // _okButton
             // 
             this._okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this._okButton.Location = new System.Drawing.Point(224, 440);
+            this._okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._okButton.Location = new System.Drawing.Point(224, 465);
             this._okButton.Name = "_okButton";
-            this._okButton.FlatStyle = FlatStyle.System;
             this._okButton.Size = new System.Drawing.Size(72, 24);
             this._okButton.TabIndex = 13;
-            this._okButton.Click += new EventHandler(OnOK);
+            this._okButton.Click += new System.EventHandler(this.OnOK);
             // 
             // _cancelButton
             // 
             this._cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this._cancelButton.Location = new System.Drawing.Point(312, 440);
+            this._cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this._cancelButton.Location = new System.Drawing.Point(312, 465);
             this._cancelButton.Name = "_cancelButton";
-            this._cancelButton.FlatStyle = FlatStyle.System;
             this._cancelButton.Size = new System.Drawing.Size(72, 24);
             this._cancelButton.TabIndex = 14;
+            // 
+            // _nameBox
+            // 
+            this._nameBox.Location = new System.Drawing.Point(103, 8);
+            this._nameBox.Name = "_nameBox";
+            this._nameBox.Size = new System.Drawing.Size(136, 19);
+            this._nameBox.TabIndex = 16;
+            // 
+            // _nameLabel
+            // 
+            this._nameLabel.Location = new System.Drawing.Point(8, 8);
+            this._nameLabel.Name = "_nameLabel";
+            this._nameLabel.Size = new System.Drawing.Size(80, 23);
+            this._nameLabel.TabIndex = 15;
+            this._nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ProfileEdit
             // 
             this.AcceptButton = this._okButton;
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
             this.CancelButton = this._cancelButton;
-            this.ClientSize = new System.Drawing.Size(394, 471);
+            this.ClientSize = new System.Drawing.Size(394, 545);
+            this.Controls.Add(this._nameBox);
+            this.Controls.Add(this._nameLabel);
             this.Controls.Add(this._cancelButton);
             this.Controls.Add(this._okButton);
             this.Controls.Add(this._optionGroup);
@@ -445,15 +468,23 @@ namespace Poderosa.PortForwarding {
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ProfileEdit";
-            this.StartPosition = FormStartPosition.CenterParent;
             this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this._authTypeGroup.ResumeLayout(false);
+            this._authTypeGroup.PerformLayout();
             this._localToRemoteGroup.ResumeLayout(false);
+            this._localToRemoteGroup.PerformLayout();
+            this._remoteToLocalGroup.ResumeLayout(false);
+            this._remoteToLocalGroup.PerformLayout();
+            this._optionGroup.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
         #endregion
 
         private void InitializeText() {
+            this._nameLabel.Text = Env.Strings.GetString("Form.ProfileEdit._nameLabel");
             this._sshHostLabel.Text = Env.Strings.GetString("Form.ProfileEdit._sshHostLabel");
             this._portLabel.Text = Env.Strings.GetString("Form.ProfileEdit._portLabel");
             this._accountLabel.Text = Env.Strings.GetString("Form.ProfileEdit._accountLabel");
@@ -483,6 +514,7 @@ namespace Poderosa.PortForwarding {
                 _passwordOption.Checked = true;
             }
             else {
+                _nameBox.Text = prof.Name;
                 _sshHostBox.Text = prof.SSHHost;
                 _portBox.Text = prof.SSHPort.ToString();
                 _accountBox.Text = prof.SSHAccount;
@@ -553,6 +585,8 @@ namespace Poderosa.PortForwarding {
                 _result.AuthType = _publicKeyOption.Checked ? AuthenticationType.PublicKey : AuthenticationType.Password;
                 if (_result.AuthType == AuthenticationType.PublicKey)
                     _result.PrivateKeyFile = _privateKeyBox.Text;
+
+                _result.Name = _nameBox.Text;
 
                 itemname = Env.Strings.GetString("Caption.ProfileEdit.SSHPortNumber");
                 _result.SSHPort = Util.ParsePort(_portBox.Text);

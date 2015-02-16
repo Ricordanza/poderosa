@@ -74,6 +74,7 @@ namespace Poderosa.PortForwarding {
     //接続パラメータ
     internal abstract class ChannelProfile {
 
+        protected string _name;
         protected string _sshHost; //SSHサーバのホスト
         protected ushort _sshPort;
         protected string _sshAccount;
@@ -90,11 +91,23 @@ namespace Poderosa.PortForwarding {
         protected bool _useIPv6;
 
         public ChannelProfile() {
+            _name = string.Empty;
             _sshPort = 22;
             _authType = AuthenticationType.Password;
             _protocol = ProtocolType.Tcp;
         }
 
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
         public string SSHHost {
             get {
                 return _sshHost;
@@ -198,6 +211,7 @@ namespace Poderosa.PortForwarding {
         public abstract void Save(ConfigNode node);
 
         public void ExportTo(ConfigNode node) {
+            node["name"] = _name;
             node["ssh-host"] = _sshHost;
             node["ssh-port"] = _sshPort.ToString();
             node["account"] = _sshAccount;
@@ -212,6 +226,7 @@ namespace Poderosa.PortForwarding {
             node["ipv6"] = _useIPv6.ToString();
         }
         public void Import(ConfigNode node) {
+            _name = node["name"];
             _sshHost = node["ssh-host"];
             _sshPort = Util.ParsePort(node["ssh-port"], 22);
             _sshAccount = node["account"];

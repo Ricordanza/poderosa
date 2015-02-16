@@ -24,6 +24,7 @@ namespace Poderosa.PortForwarding {
         public static void Main(string[] args) {
             if (ActivateAnotherInstance())
                 return;
+
             LoadEnv();
             Run();
             SaveEnv();
@@ -111,6 +112,7 @@ namespace Poderosa.PortForwarding {
         }
 
         private static void SaveEnv() {
+
             if (IsRegistryWritable) {
                 RegistryKey g = Registry.CurrentUser.CreateSubKey(REGISTRY_PATH);
                 g.SetValue("option-place", _options.OptionPreservePlace.ToString());

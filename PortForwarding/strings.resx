@@ -1,3 +1,530 @@
-﻿<root><resheader name="ResMimeType"><value>text/microsoft-resx</value></resheader><resheader name="Version"><value>1.0.0.0</value></resheader><resheader name="Reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><resheader name="Writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3102.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader><data name="Common.OK"><value>OK</value></data><data name="Common.Cancel"><value>Cancel</value></data><data name="Form.AboutBox.Text"><value>Version Information</value></data><data name="Message.Channel.ServerError"><value>The SSH server {0} has notified following error.
-{1}</value></data><data name="Message.Commands.CannotEditConnectedProfile"><value>Cannot edit while connecting.</value></data><data name="Message.Commands.CannotDeleteConnectedProfile"><value>Cannot remove while connecting.</value></data><data name="Message.ConnectionManager.Disconnected"><value>Disconnected by the remote host.</value></data><data name="Message.ConnectionManager.ConnectionCancelled"><value>Aborted the connection.</value></data><data name="Form.MainForm._sshHostColumn"><value>SSH Host</value></data><data name="Form.MainForm._accountColumn"><value>Account</value></data><data name="Form.MainForm._typeColumn"><value>Type</value></data><data name="Form.MainForm._listenPortColumn"><value>Listening Port</value></data><data name="Form.MainForm._destinationHostColumn"><value>Destination Host</value></data><data name="Form.MainForm._destinationPortColumn"><value>Destination Port</value></data><data name="Form.MainForm._statusColumn"><value>Status</value></data><data name="Menu._menuFile"><value>&amp;File</value></data><data name="Menu._menuNewProfile"><value>&amp;New profile...</value></data><data name="Menu._menuTaskTray"><value>Put into &amp;Task Tray</value></data><data name="Menu._menuExit"><value>E&amp;xit</value></data><data name="Menu._menuProfile"><value>&amp;Profile</value></data><data name="Menu._menuProfileProperty"><value>&amp;Property...</value></data><data name="Menu._menuProfileRemove"><value>&amp;Remove</value></data><data name="Menu._menuProfileUp"><value>&amp;Up</value></data><data name="Menu._menuProfileDown"><value>D&amp;own</value></data><data name="Menu._menuProfileConnect"><value>&amp;Connect</value></data><data name="Menu._menuProfileDisconnect"><value>&amp;Disconnect</value></data><data name="Menu._menuAllProfile"><value>&amp;All Profiles</value></data><data name="Menu._menuAllProfileConnect"><value>&amp;Connect</value></data><data name="Menu._menuAllProfileDisconnect"><value>&amp;Disconnect</value></data><data name="Menu._menuTool"><value>&amp;Tools</value></data><data name="Menu._menuOption"><value>&amp;Options...</value></data><data name="Menu._menuHelp"><value>&amp;Help</value></data><data name="Menu._menuAboutBox"><value>&amp;About...</value></data><data name="Menu._menuAllProfileConnect"><value>&amp;Connect All</value></data><data name="Menu._menuAllProfileDisconnect"><value>&amp;Disconnect All</value></data><data name="Message.MainForm.AskDisconnect"><value>There are connecting profiles. Do you wish to disconnect them?</value></data><data name="Form.OptionDialog._cipherOrderGroup"><value>Encryption algorithm priority</value></data><data name="Form.OptionDialog._algorithmOrderUp"><value>&amp;Up</value></data><data name="Form.OptionDialog._algorithmOrderDown"><value>&amp;Down</value></data><data name="Form.OptionDialog._ssh2OptionGroup"><value>Protocol option (SSH2 only)</value></data><data name="Form.OptionDialog._hostKeyLabel"><value>&amp;Host key authentication algorithm</value></data><data name="Form.OptionDialog._windowSizeLabel"><value>&amp;Window size of SSH channel</value></data><data name="Form.OptionDialog._sshMiscGroup"><value>Miscellaneous</value></data><data name="Form.OptionDialog._retainsPassphrase"><value>&amp;Memorize Passphrase until the Application is Terminated</value></data><data name="Form.OptionDialog._sshCheckMAC"><value>&amp;Check MAC (if you set this off, the performance gains slightly at the risk of security.)</value></data><data name="Form.OptionDialog._connectionPage"><value>Connection</value></data><data name="Form.OptionDialog._useSocks"><value>Use &amp;SOCKS5</value></data><data name="Form.OptionDialog._socksServerLabel"><value>Server &amp;name</value></data><data name="Form.OptionDialog._socksPortLabel"><value>&amp;Port</value></data><data name="Form.OptionDialog._socksAccountLabel"><value>&amp;Account</value></data><data name="Form.OptionDialog._socksPasswordLabel"><value>Pass&amp;word</value></data><data name="Form.OptionDialog._socksNANetworksLabel"><value>&amp;Exclude the following networks for SOCKS
-(concatenate strings in the form '192.168.10.0/24' using ';')</value></data><data name="Form.OptionDialog._genericPage"><value>Generic</value></data><data name="Form.OptionDialog._showInTaskBarOption"><value>Display in &amp;taskbar</value></data><data name="Form.OptionDialog._warningOnExit"><value>&amp;Warn on exit if active connections exist</value></data><data name="Form.OptionDialog._optionPreservePlaceLabel"><value>Preservation Place of &amp;Option Settings</value></data><data name="Form.OptionDialog._languageLabel"><value>&amp;Language</value></data><data name="Form.OptionDialog.Text"><value>Option settings</value></data><data name="Message.OptionDialog.InvalidWindowSize"><value>The value of window size is not valid.</value></data><data name="Message.OptionDialog.EmptySOCKSServer"><value>The SOCKS server name is empty.</value></data><data name="Caption.OptionDialog.SOCKSPort"><value>SOCKS port number</value></data><data name="Caption.OptionDialog.NetworkAddress"><value>network address</value></data><data name="Message.OptionDialog.InvalidItem"><value>The value of {0} is not valid.</value></data><data name="Message.OptionDialog.RegistryAuthRequired"><value>To change the setting preservation place, authority of registry modification is required.</value></data><data name="Message.OptionDialog.AskJapaneseFont"><value>If Japanese font is not installed in your computer, the window will be shown incorrectly. Do you wish to continue?</value></data><data name="Message.Options.IntFormatError"><value>Configuration file format error: {0} element is not an integer.</value></data><data name="Message.Options.FloatFormatError"><value>Configuration file format error: {0} element is not a number.</value></data><data name="Message.Options.BoolFormatError"><value>Configuration file format error: {0} element is not a boolean.</value></data><data name="Enum.OptionPreservePlace.InstalledDir"><value>Installed directory</value></data><data name="Enum.OptionPreservePlace.AppData"><value>Windows standard</value></data><data name="Enum.Language.English"><value>English</value></data><data name="Enum.Language.Japanese"><value>Japanese</value></data><data name="Form.ProfileEdit._sshHostLabel"><value>&amp;SSH Server</value></data><data name="Form.ProfileEdit._portLabel"><value>P&amp;ort</value></data><data name="Form.ProfileEdit._accountLabel"><value>&amp;Account</value></data><data name="Form.ProfileEdit._authTypeGroup"><value>Authentication method</value></data><data name="Form.ProfileEdit._passwordOption"><value>&amp;Password</value></data><data name="Form.ProfileEdit._publicKeyOption"><value>Public &amp;Key</value></data><data name="Form.ProfileEdit._privateKeyLabel"><value>Private Key &amp;File</value></data><data name="Form.ProfileEdit._localToRemoteOption"><value>Port forwarding from &amp;local to remote</value></data><data name="Form.ProfileEdit._LRLocalPortLabel"><value>Local listening por&amp;t</value></data><data name="Form.ProfileEdit._LRIPv6"><value>Use IPv&amp;6</value></data><data name="Form.ProfileEdit._LRRemoteHostLabel"><value>Destination &amp;host</value></data><data name="Form.ProfileEdit._LRRemotePortLabel"><value>&amp;Destination port</value></data><data name="Form.ProfileEdit._remoteToLocalOption"><value>Port forwarding from &amp;Remote to Local</value></data><data name="Form.ProfileEdit._RLRemotePortLabel"><value>Remote listening por&amp;t</value></data><data name="Form.ProfileEdit._RLLocalHostLabel"><value>Destination &amp;host</value></data><data name="Form.ProfileEdit._RLLocalPortLabel"><value>&amp;Destination port</value></data><data name="Form.ProfileEdit._optionGroup"><value>Options</value></data><data name="Form.ProfileEdit._loopbackOnly"><value>Allow connections only from Loop&amp;back Address</value></data><data name="Form.ProfileEdit.Text"><value>Edit profile</value></data><data name="Message.ProfileEdit.EmptySSHServer"><value>SSH server name is empty.</value></data><data name="Message.ProfileEdit.EmptyAccount"><value>Account is empty.</value></data><data name="Caption.ProfileEdit.SSHPortNumber"><value>SSH port number</value></data><data name="Caption.ProfileEdit.LocalPort"><value>local port</value></data><data name="Message.ProfileEdit.EmptyRemoveHost"><value>The remote host name is empty.</value></data><data name="Caption.ProfileEdit.DestinationPort"><value>destination port</value></data><data name="Caption.ProfileEdit.DestinationHost"><value>destination host</value></data><data name="Caption.ProfileEdit.RemotePort"><value>remote port</value></data><data name="Message.SocketWithTimeout.DestinationNotFound"><value>The {0} {1} was not found.</value></data><data name="Message.SocketWithTimeout.FailedtoConnect"><value>Failed to connect to {0} {1}. Please check the address and the port.</value></data><data name="Message.SocketWithTimeout.SOCKSError"><value>An error occurred while SOCKS negotiation.</value></data><data name="Message.SocketWithTimeout.InvalidAddressForSOCKS"><value>{0} is invalid as a network address.</value></data><data name="Message.SOCKS.AddressIsNotSpecified"><value>The address is not specified.</value></data><data name="Message.SOCKS.FailedToAuthenticate"><value>SOCKS authentication failure.</value></data><data name="Message.SOCKS.FailedToConnect"><value>Failed to communicate with the SOCKS server.</value></data><data name="Message.SOCKS.VersionError"><value>The protocol version of the SOCKS server is wrong.</value></data><data name="Messaeg.SOCKS.UnknownAuthMethod"><value>The server specified an unsupported SOCKS authentication method [{0}].</value></data><data name="Message.FailedToConnect"><value>Failed to connect.</value></data><data name="Message.SOCKS.ServerError"><value>SOCKS server error</value></data><data name="Message.SOCKS.NotPermitted"><value>The connection is not allowed.</value></data><data name="Message.SOCKS.FailedToConnectNetwork"><value>Failed to reach the destination network.</value></data><data name="Message.SOCKS.FailedToConnectHost"><value>Failed to reach the destination host.</value></data><data name="Message.SOCKS.AccessDenied"><value>The access is denied.</value></data><data name="Message.SOCKS.TTLDisposed"><value>TTL is disposed.</value></data><data name="Message.SOCKS.UnsupportedCommand"><value>The SOCKS command is not supported.</value></data><data name="Message.SOCKS.UnsupportedAddress"><value>The type of address is not supported.</value></data><data name="Message.SOCKS.UnknownMessage"><value>Unknown Code {0}</value></data><data name="Form.SSHShortcutLoginDialog._privateKeyLabel"><value>Private Key</value></data><data name="Form.SSHShortcutLoginDialog._passphraseLabel"><value>&amp;Passphrase</value></data><data name="Form.SSHShortcutLoginDialog._hostLabel"><value>Host</value></data><data name="Form.SSHShortcutLoginDialog._methodLabel"><value>Method</value></data><data name="Form.SSHShortcutLoginDialog._accountLabel"><value>Account</value></data><data name="Form.SSHShortcutLoginDialog._authTypeLabel"><value>Authentication</value></data><data name="Form.SSHShortcutLoginDialog.Text"><value>SSH login</value></data><data name="Caption.SSHShortcutLoginDialog.NotRegularPort"><value>(port {0})</value></data><data name="Caption.SSHShortcutLoginDialog.Connecting"><value>SSH Login - Connecting (Ctrl+C to stop)</value></data><data name="Message.SSHShortcutLoginDialog.KeyFileNotExist"><value>The private key file is not exist.</value></data><data name="Message.SSHShortcutLoginDialog.ConnectionError"><value>Connection error</value></data><data name="Caption.Util.SelectPrivateKey"><value>Private Key</value></data><data name="Caption.Util.Local"><value>local</value></data><data name="Caption.Util.Remote"><value>remote</value></data><data name="Caption.Util.Connected"><value>connected</value></data><data name="Caption.Util.Disconnected"><value>disconnected</value></data><data name="Caption.AuthenticationType.Password"><value>Password</value></data><data name="Caption.AuthenticationType.PublicKey"><value>Public key</value></data></root>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common.OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common.Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Form.AboutBox.Text" xml:space="preserve">
+    <value>Version Information</value>
+  </data>
+  <data name="Message.Channel.ServerError" xml:space="preserve">
+    <value>The SSH server {0} has notified following error.
+{1}</value>
+  </data>
+  <data name="Message.Commands.CannotEditConnectedProfile" xml:space="preserve">
+    <value>Cannot edit while connecting.</value>
+  </data>
+  <data name="Message.Commands.CannotDeleteConnectedProfile" xml:space="preserve">
+    <value>Cannot remove while connecting.</value>
+  </data>
+  <data name="Message.ConnectionManager.Disconnected" xml:space="preserve">
+    <value>Disconnected by the remote host.</value>
+  </data>
+  <data name="Message.ConnectionManager.ConnectionCancelled" xml:space="preserve">
+    <value>Aborted the connection.</value>
+  </data>
+  <data name="Form.MainForm._sshHostColumn" xml:space="preserve">
+    <value>SSH Host</value>
+  </data>
+  <data name="Form.MainForm._accountColumn" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Form.MainForm._typeColumn" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Form.MainForm._listenPortColumn" xml:space="preserve">
+    <value>Listening Port</value>
+  </data>
+  <data name="Form.MainForm._destinationHostColumn" xml:space="preserve">
+    <value>Destination Host</value>
+  </data>
+  <data name="Form.MainForm._destinationPortColumn" xml:space="preserve">
+    <value>Destination Port</value>
+  </data>
+  <data name="Form.MainForm._statusColumn" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="Menu._menuFile" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="Menu._menuNewProfile" xml:space="preserve">
+    <value>&amp;New profile...</value>
+  </data>
+  <data name="Menu._menuTaskTray" xml:space="preserve">
+    <value>Put into &amp;Task Tray</value>
+  </data>
+  <data name="Menu._menuExit" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="Menu._menuProfile" xml:space="preserve">
+    <value>&amp;Profile</value>
+  </data>
+  <data name="Menu._menuProfileProperty" xml:space="preserve">
+    <value>&amp;Property...</value>
+  </data>
+  <data name="Menu._menuProfileRemove" xml:space="preserve">
+    <value>&amp;Remove</value>
+  </data>
+  <data name="Menu._menuProfileUp" xml:space="preserve">
+    <value>&amp;Up</value>
+  </data>
+  <data name="Menu._menuProfileDown" xml:space="preserve">
+    <value>D&amp;own</value>
+  </data>
+  <data name="Menu._menuProfileConnect" xml:space="preserve">
+    <value>&amp;Connect</value>
+  </data>
+  <data name="Menu._menuProfileDisconnect" xml:space="preserve">
+    <value>&amp;Disconnect</value>
+  </data>
+  <data name="Menu._menuAllProfile" xml:space="preserve">
+    <value>&amp;All Profiles</value>
+  </data>
+  <data name="Menu._menuAllProfileConnect" xml:space="preserve">
+    <value>&amp;Connect All</value>
+  </data>
+  <data name="Menu._menuAllProfileDisconnect" xml:space="preserve">
+    <value>&amp;Disconnect All</value>
+  </data>
+  <data name="Menu._menuTool" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="Menu._menuOption" xml:space="preserve">
+    <value>&amp;Options...</value>
+  </data>
+  <data name="Menu._menuHelp" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="Menu._menuAboutBox" xml:space="preserve">
+    <value>&amp;About...</value>
+  </data>
+  <data name="Message.MainForm.AskDisconnect" xml:space="preserve">
+    <value>There are connecting profiles. Do you wish to disconnect them?</value>
+  </data>
+  <data name="Form.OptionDialog._cipherOrderGroup" xml:space="preserve">
+    <value>Encryption algorithm priority</value>
+  </data>
+  <data name="Form.OptionDialog._algorithmOrderUp" xml:space="preserve">
+    <value>&amp;Up</value>
+  </data>
+  <data name="Form.OptionDialog._algorithmOrderDown" xml:space="preserve">
+    <value>&amp;Down</value>
+  </data>
+  <data name="Form.OptionDialog._ssh2OptionGroup" xml:space="preserve">
+    <value>Protocol option (SSH2 only)</value>
+  </data>
+  <data name="Form.OptionDialog._hostKeyLabel" xml:space="preserve">
+    <value>&amp;Host key authentication algorithm</value>
+  </data>
+  <data name="Form.OptionDialog._windowSizeLabel" xml:space="preserve">
+    <value>&amp;Window size of SSH channel</value>
+  </data>
+  <data name="Form.OptionDialog._sshMiscGroup" xml:space="preserve">
+    <value>Miscellaneous</value>
+  </data>
+  <data name="Form.OptionDialog._retainsPassphrase" xml:space="preserve">
+    <value>&amp;Memorize Passphrase until the Application is Terminated</value>
+  </data>
+  <data name="Form.OptionDialog._sshCheckMAC" xml:space="preserve">
+    <value>&amp;Check MAC (if you set this off, the performance gains slightly at the risk of security.)</value>
+  </data>
+  <data name="Form.OptionDialog._connectionPage" xml:space="preserve">
+    <value>Connection</value>
+  </data>
+  <data name="Form.OptionDialog._useSocks" xml:space="preserve">
+    <value>Use &amp;SOCKS5</value>
+  </data>
+  <data name="Form.OptionDialog._socksServerLabel" xml:space="preserve">
+    <value>Server &amp;name</value>
+  </data>
+  <data name="Form.OptionDialog._socksPortLabel" xml:space="preserve">
+    <value>&amp;Port</value>
+  </data>
+  <data name="Form.OptionDialog._socksAccountLabel" xml:space="preserve">
+    <value>&amp;Account</value>
+  </data>
+  <data name="Form.OptionDialog._socksPasswordLabel" xml:space="preserve">
+    <value>Pass&amp;word</value>
+  </data>
+  <data name="Form.OptionDialog._socksNANetworksLabel" xml:space="preserve">
+    <value>&amp;Exclude the following networks for SOCKS
+(concatenate strings in the form '192.168.10.0/24' using ';')</value>
+  </data>
+  <data name="Form.OptionDialog._genericPage" xml:space="preserve">
+    <value>Generic</value>
+  </data>
+  <data name="Form.OptionDialog._showInTaskBarOption" xml:space="preserve">
+    <value>Display in &amp;taskbar</value>
+  </data>
+  <data name="Form.OptionDialog._warningOnExit" xml:space="preserve">
+    <value>&amp;Warn on exit if active connections exist</value>
+  </data>
+  <data name="Form.OptionDialog._optionPreservePlaceLabel" xml:space="preserve">
+    <value>Preservation Place of &amp;Option Settings</value>
+  </data>
+  <data name="Form.OptionDialog._languageLabel" xml:space="preserve">
+    <value>&amp;Language</value>
+  </data>
+  <data name="Form.OptionDialog.Text" xml:space="preserve">
+    <value>Option settings</value>
+  </data>
+  <data name="Message.OptionDialog.InvalidWindowSize" xml:space="preserve">
+    <value>The value of window size is not valid.</value>
+  </data>
+  <data name="Message.OptionDialog.EmptySOCKSServer" xml:space="preserve">
+    <value>The SOCKS server name is empty.</value>
+  </data>
+  <data name="Caption.OptionDialog.SOCKSPort" xml:space="preserve">
+    <value>SOCKS port number</value>
+  </data>
+  <data name="Caption.OptionDialog.NetworkAddress" xml:space="preserve">
+    <value>network address</value>
+  </data>
+  <data name="Message.OptionDialog.InvalidItem" xml:space="preserve">
+    <value>The value of {0} is not valid.</value>
+  </data>
+  <data name="Message.OptionDialog.RegistryAuthRequired" xml:space="preserve">
+    <value>To change the setting preservation place, authority of registry modification is required.</value>
+  </data>
+  <data name="Message.OptionDialog.AskJapaneseFont" xml:space="preserve">
+    <value>If Japanese font is not installed in your computer, the window will be shown incorrectly. Do you wish to continue?</value>
+  </data>
+  <data name="Message.Options.IntFormatError" xml:space="preserve">
+    <value>Configuration file format error: {0} element is not an integer.</value>
+  </data>
+  <data name="Message.Options.FloatFormatError" xml:space="preserve">
+    <value>Configuration file format error: {0} element is not a number.</value>
+  </data>
+  <data name="Message.Options.BoolFormatError" xml:space="preserve">
+    <value>Configuration file format error: {0} element is not a boolean.</value>
+  </data>
+  <data name="Enum.OptionPreservePlace.InstalledDir" xml:space="preserve">
+    <value>Installed directory</value>
+  </data>
+  <data name="Enum.OptionPreservePlace.AppData" xml:space="preserve">
+    <value>Windows standard</value>
+  </data>
+  <data name="Enum.Language.English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Enum.Language.Japanese" xml:space="preserve">
+    <value>Japanese</value>
+  </data>
+  <data name="Form.ProfileEdit._sshHostLabel" xml:space="preserve">
+    <value>&amp;SSH Server</value>
+  </data>
+  <data name="Form.ProfileEdit._portLabel" xml:space="preserve">
+    <value>P&amp;ort</value>
+  </data>
+  <data name="Form.ProfileEdit._accountLabel" xml:space="preserve">
+    <value>&amp;Account</value>
+  </data>
+  <data name="Form.ProfileEdit._authTypeGroup" xml:space="preserve">
+    <value>Authentication method</value>
+  </data>
+  <data name="Form.ProfileEdit._passwordOption" xml:space="preserve">
+    <value>&amp;Password</value>
+  </data>
+  <data name="Form.ProfileEdit._publicKeyOption" xml:space="preserve">
+    <value>Public &amp;Key</value>
+  </data>
+  <data name="Form.ProfileEdit._privateKeyLabel" xml:space="preserve">
+    <value>Private Key &amp;File</value>
+  </data>
+  <data name="Form.ProfileEdit._localToRemoteOption" xml:space="preserve">
+    <value>Port forwarding from &amp;local to remote</value>
+  </data>
+  <data name="Form.ProfileEdit._LRLocalPortLabel" xml:space="preserve">
+    <value>Local listening por&amp;t</value>
+  </data>
+  <data name="Form.ProfileEdit._LRIPv6" xml:space="preserve">
+    <value>Use IPv&amp;6</value>
+  </data>
+  <data name="Form.ProfileEdit._LRRemoteHostLabel" xml:space="preserve">
+    <value>Destination &amp;host</value>
+  </data>
+  <data name="Form.ProfileEdit._LRRemotePortLabel" xml:space="preserve">
+    <value>&amp;Destination port</value>
+  </data>
+  <data name="Form.ProfileEdit._remoteToLocalOption" xml:space="preserve">
+    <value>Port forwarding from &amp;Remote to Local</value>
+  </data>
+  <data name="Form.ProfileEdit._RLRemotePortLabel" xml:space="preserve">
+    <value>Remote listening por&amp;t</value>
+  </data>
+  <data name="Form.ProfileEdit._RLLocalHostLabel" xml:space="preserve">
+    <value>Destination &amp;host</value>
+  </data>
+  <data name="Form.ProfileEdit._RLLocalPortLabel" xml:space="preserve">
+    <value>&amp;Destination port</value>
+  </data>
+  <data name="Form.ProfileEdit._optionGroup" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Form.ProfileEdit._loopbackOnly" xml:space="preserve">
+    <value>Allow connections only from Loop&amp;back Address</value>
+  </data>
+  <data name="Form.ProfileEdit.Text" xml:space="preserve">
+    <value>Edit profile</value>
+  </data>
+  <data name="Message.ProfileEdit.EmptySSHServer" xml:space="preserve">
+    <value>SSH server name is empty.</value>
+  </data>
+  <data name="Message.ProfileEdit.EmptyAccount" xml:space="preserve">
+    <value>Account is empty.</value>
+  </data>
+  <data name="Caption.ProfileEdit.SSHPortNumber" xml:space="preserve">
+    <value>SSH port number</value>
+  </data>
+  <data name="Caption.ProfileEdit.LocalPort" xml:space="preserve">
+    <value>local port</value>
+  </data>
+  <data name="Message.ProfileEdit.EmptyRemoveHost" xml:space="preserve">
+    <value>The remote host name is empty.</value>
+  </data>
+  <data name="Caption.ProfileEdit.DestinationPort" xml:space="preserve">
+    <value>destination port</value>
+  </data>
+  <data name="Caption.ProfileEdit.DestinationHost" xml:space="preserve">
+    <value>destination host</value>
+  </data>
+  <data name="Caption.ProfileEdit.RemotePort" xml:space="preserve">
+    <value>remote port</value>
+  </data>
+  <data name="Message.SocketWithTimeout.DestinationNotFound" xml:space="preserve">
+    <value>The {0} {1} was not found.</value>
+  </data>
+  <data name="Message.SocketWithTimeout.FailedtoConnect" xml:space="preserve">
+    <value>Failed to connect to {0} {1}. Please check the address and the port.</value>
+  </data>
+  <data name="Message.SocketWithTimeout.SOCKSError" xml:space="preserve">
+    <value>An error occurred while SOCKS negotiation.</value>
+  </data>
+  <data name="Message.SocketWithTimeout.InvalidAddressForSOCKS" xml:space="preserve">
+    <value>{0} is invalid as a network address.</value>
+  </data>
+  <data name="Message.SOCKS.AddressIsNotSpecified" xml:space="preserve">
+    <value>The address is not specified.</value>
+  </data>
+  <data name="Message.SOCKS.FailedToAuthenticate" xml:space="preserve">
+    <value>SOCKS authentication failure.</value>
+  </data>
+  <data name="Message.SOCKS.FailedToConnect" xml:space="preserve">
+    <value>Failed to communicate with the SOCKS server.</value>
+  </data>
+  <data name="Message.SOCKS.VersionError" xml:space="preserve">
+    <value>The protocol version of the SOCKS server is wrong.</value>
+  </data>
+  <data name="Messaeg.SOCKS.UnknownAuthMethod" xml:space="preserve">
+    <value>The server specified an unsupported SOCKS authentication method [{0}].</value>
+  </data>
+  <data name="Message.FailedToConnect" xml:space="preserve">
+    <value>Failed to connect.</value>
+  </data>
+  <data name="Message.SOCKS.ServerError" xml:space="preserve">
+    <value>SOCKS server error</value>
+  </data>
+  <data name="Message.SOCKS.NotPermitted" xml:space="preserve">
+    <value>The connection is not allowed.</value>
+  </data>
+  <data name="Message.SOCKS.FailedToConnectNetwork" xml:space="preserve">
+    <value>Failed to reach the destination network.</value>
+  </data>
+  <data name="Message.SOCKS.FailedToConnectHost" xml:space="preserve">
+    <value>Failed to reach the destination host.</value>
+  </data>
+  <data name="Message.SOCKS.AccessDenied" xml:space="preserve">
+    <value>The access is denied.</value>
+  </data>
+  <data name="Message.SOCKS.TTLDisposed" xml:space="preserve">
+    <value>TTL is disposed.</value>
+  </data>
+  <data name="Message.SOCKS.UnsupportedCommand" xml:space="preserve">
+    <value>The SOCKS command is not supported.</value>
+  </data>
+  <data name="Message.SOCKS.UnsupportedAddress" xml:space="preserve">
+    <value>The type of address is not supported.</value>
+  </data>
+  <data name="Message.SOCKS.UnknownMessage" xml:space="preserve">
+    <value>Unknown Code {0}</value>
+  </data>
+  <data name="Form.SSHShortcutLoginDialog._privateKeyLabel" xml:space="preserve">
+    <value>Private Key</value>
+  </data>
+  <data name="Form.SSHShortcutLoginDialog._passphraseLabel" xml:space="preserve">
+    <value>&amp;Passphrase</value>
+  </data>
+  <data name="Form.SSHShortcutLoginDialog._hostLabel" xml:space="preserve">
+    <value>Host</value>
+  </data>
+  <data name="Form.SSHShortcutLoginDialog._methodLabel" xml:space="preserve">
+    <value>Method</value>
+  </data>
+  <data name="Form.SSHShortcutLoginDialog._accountLabel" xml:space="preserve">
+    <value>Account</value>
+  </data>
+  <data name="Form.SSHShortcutLoginDialog._authTypeLabel" xml:space="preserve">
+    <value>Authentication</value>
+  </data>
+  <data name="Form.SSHShortcutLoginDialog.Text" xml:space="preserve">
+    <value>SSH login</value>
+  </data>
+  <data name="Caption.SSHShortcutLoginDialog.NotRegularPort" xml:space="preserve">
+    <value>(port {0})</value>
+  </data>
+  <data name="Caption.SSHShortcutLoginDialog.Connecting" xml:space="preserve">
+    <value>SSH Login - Connecting (Ctrl+C to stop)</value>
+  </data>
+  <data name="Message.SSHShortcutLoginDialog.KeyFileNotExist" xml:space="preserve">
+    <value>The private key file is not exist.</value>
+  </data>
+  <data name="Message.SSHShortcutLoginDialog.ConnectionError" xml:space="preserve">
+    <value>Connection error</value>
+  </data>
+  <data name="Caption.Util.SelectPrivateKey" xml:space="preserve">
+    <value>Private Key</value>
+  </data>
+  <data name="Caption.Util.Local" xml:space="preserve">
+    <value>local</value>
+  </data>
+  <data name="Caption.Util.Remote" xml:space="preserve">
+    <value>remote</value>
+  </data>
+  <data name="Caption.Util.Connected" xml:space="preserve">
+    <value>connected</value>
+  </data>
+  <data name="Caption.Util.Disconnected" xml:space="preserve">
+    <value>disconnected</value>
+  </data>
+  <data name="Caption.AuthenticationType.Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Caption.AuthenticationType.PublicKey" xml:space="preserve">
+    <value>Public key</value>
+  </data>
+  <data name="Form.MainForm._nameColumn" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="String1Form.ProfileEdit._nameLabel" xml:space="preserve">
+    <value>Name</value>
+  </data>
+</root>
