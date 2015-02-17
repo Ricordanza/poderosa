@@ -527,4 +527,10 @@
   <data name="Form.ProfileEdit._nameLabel" xml:space="preserve">
     <value>名称</value>
   </data>
+  <data name="Form.ProfileEdit._authGroup" xml:space="preserve">
+    <value>認証</value>
+  </data>
+  <data name="Form.ProfileEdit._noAuth" xml:space="preserve">
+    <value>認証あり</value>
+  </data>
 </root>

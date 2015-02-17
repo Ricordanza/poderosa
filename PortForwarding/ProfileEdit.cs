@@ -54,6 +54,8 @@ namespace Poderosa.PortForwarding {
         private System.Windows.Forms.Button _cancelButton;
         private TextBox _nameBox;
         private Label _nameLabel;
+        private GroupBox _authGroup;
+        private CheckBox _noAuth;
         /// <summary>
         /// 必要なデザイナ変数です。
         /// </summary>
@@ -126,10 +128,13 @@ namespace Poderosa.PortForwarding {
             this._cancelButton = new System.Windows.Forms.Button();
             this._nameBox = new System.Windows.Forms.TextBox();
             this._nameLabel = new System.Windows.Forms.Label();
+            this._authGroup = new System.Windows.Forms.GroupBox();
+            this._noAuth = new System.Windows.Forms.CheckBox();
             this._authTypeGroup.SuspendLayout();
             this._localToRemoteGroup.SuspendLayout();
             this._remoteToLocalGroup.SuspendLayout();
             this._optionGroup.SuspendLayout();
+            this._authGroup.SuspendLayout();
             this.SuspendLayout();
             // 
             // _sshHostLabel
@@ -145,7 +150,7 @@ namespace Poderosa.PortForwarding {
             this._sshHostBox.Location = new System.Drawing.Point(104, 33);
             this._sshHostBox.Name = "_sshHostBox";
             this._sshHostBox.Size = new System.Drawing.Size(136, 19);
-            this._sshHostBox.TabIndex = 1;
+            this._sshHostBox.TabIndex = 2;
             // 
             // _portLabel
             // 
@@ -412,7 +417,7 @@ namespace Poderosa.PortForwarding {
             // 
             this._okButton.DialogResult = System.Windows.Forms.DialogResult.OK;
             this._okButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this._okButton.Location = new System.Drawing.Point(224, 465);
+            this._okButton.Location = new System.Drawing.Point(232, 509);
             this._okButton.Name = "_okButton";
             this._okButton.Size = new System.Drawing.Size(72, 24);
             this._okButton.TabIndex = 13;
@@ -422,7 +427,7 @@ namespace Poderosa.PortForwarding {
             // 
             this._cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this._cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this._cancelButton.Location = new System.Drawing.Point(312, 465);
+            this._cancelButton.Location = new System.Drawing.Point(315, 509);
             this._cancelButton.Name = "_cancelButton";
             this._cancelButton.Size = new System.Drawing.Size(72, 24);
             this._cancelButton.TabIndex = 14;
@@ -432,7 +437,7 @@ namespace Poderosa.PortForwarding {
             this._nameBox.Location = new System.Drawing.Point(103, 8);
             this._nameBox.Name = "_nameBox";
             this._nameBox.Size = new System.Drawing.Size(136, 19);
-            this._nameBox.TabIndex = 16;
+            this._nameBox.TabIndex = 1;
             // 
             // _nameLabel
             // 
@@ -442,12 +447,31 @@ namespace Poderosa.PortForwarding {
             this._nameLabel.TabIndex = 15;
             this._nameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // _authGroup
+            // 
+            this._authGroup.Controls.Add(this._noAuth);
+            this._authGroup.Location = new System.Drawing.Point(8, 455);
+            this._authGroup.Name = "_authGroup";
+            this._authGroup.Size = new System.Drawing.Size(384, 48);
+            this._authGroup.TabIndex = 16;
+            this._authGroup.TabStop = false;
+            // 
+            // _noAuth
+            // 
+            this._noAuth.AutoSize = true;
+            this._noAuth.Location = new System.Drawing.Point(8, 18);
+            this._noAuth.Name = "_noAuth";
+            this._noAuth.Size = new System.Drawing.Size(15, 14);
+            this._noAuth.TabIndex = 0;
+            this._noAuth.UseVisualStyleBackColor = true;
+            // 
             // ProfileEdit
             // 
             this.AcceptButton = this._okButton;
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
             this.CancelButton = this._cancelButton;
             this.ClientSize = new System.Drawing.Size(394, 545);
+            this.Controls.Add(this._authGroup);
             this.Controls.Add(this._nameBox);
             this.Controls.Add(this._nameLabel);
             this.Controls.Add(this._cancelButton);
@@ -477,6 +501,8 @@ namespace Poderosa.PortForwarding {
             this._remoteToLocalGroup.ResumeLayout(false);
             this._remoteToLocalGroup.PerformLayout();
             this._optionGroup.ResumeLayout(false);
+            this._authGroup.ResumeLayout(false);
+            this._authGroup.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,6 +532,8 @@ namespace Poderosa.PortForwarding {
             this.Text = Env.Strings.GetString("Form.ProfileEdit.Text");
             this._okButton.Text = Env.Strings.GetString("Common.OK");
             this._cancelButton.Text = Env.Strings.GetString("Common.Cancel");
+            this._noAuth.Text = Env.Strings.GetString("Form.ProfileEdit._noAuth");
+            this._authGroup.Text = Env.Strings.GetString("Form.ProfileEdit._authGroup");
         }
 
         private void InitUI(ChannelProfile prof) {
@@ -518,6 +546,8 @@ namespace Poderosa.PortForwarding {
                 _sshHostBox.Text = prof.SSHHost;
                 _portBox.Text = prof.SSHPort.ToString();
                 _accountBox.Text = prof.SSHAccount;
+                _noAuth.Checked = prof.Auth;
+
                 //_udpOption.Checked = prof.ProtocolType==ProtocolType.Udp;
                 if (prof.AuthType == AuthenticationType.Password)
                     _passwordOption.Checked = true;

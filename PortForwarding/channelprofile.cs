@@ -89,12 +89,14 @@ namespace Poderosa.PortForwarding {
 
         protected bool _allowsForeignConnection;
         protected bool _useIPv6;
+        protected bool _auth;
 
         public ChannelProfile() {
             _name = string.Empty;
             _sshPort = 22;
             _authType = AuthenticationType.Password;
             _protocol = ProtocolType.Tcp;
+            _auth = false;
         }
 
         public string Name
@@ -207,7 +209,17 @@ namespace Poderosa.PortForwarding {
                 _useIPv6 = value;
             }
         }
-
+        public bool Auth
+        {
+            get
+            {
+                return _auth;
+            }
+            set
+            {
+                _auth = value;
+            }
+        }
         public abstract void Save(ConfigNode node);
 
         public void ExportTo(ConfigNode node) {
@@ -224,6 +236,7 @@ namespace Poderosa.PortForwarding {
             node["dest-port"] = _destinationPort.ToString();
             node["allows-foreign-connection"] = _allowsForeignConnection.ToString();
             node["ipv6"] = _useIPv6.ToString();
+            node["auth"] = _auth.ToString();
         }
         public void Import(ConfigNode node) {
             _name = node["name"];
@@ -239,6 +252,7 @@ namespace Poderosa.PortForwarding {
             _destinationPort = Util.ParsePort(node["dest-port"]);
             _allowsForeignConnection = Util.ParseBool(node["allows-foreign-connection"], false);
             _useIPv6 = Util.ParseBool(node["ipv6"], false);
+            _auth = Util.ParseBool(node["auth"], false);
         }
     }
 

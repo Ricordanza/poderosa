@@ -294,7 +294,7 @@ namespace Poderosa.PortForwarding {
         private void AdjustUI() {
         }
 
-        private void OnOK(object sender, System.EventArgs e) {
+        public void OnOK(object sender, System.EventArgs e) {
             this.DialogResult = DialogResult.None;
             if (ValidateContent() == null)
                 return;  //パラメータに誤りがあれば即脱出
@@ -362,7 +362,7 @@ namespace Poderosa.PortForwarding {
         }
 
         //Invokeで来るもの
-        private void SuccessfullyExitX() {
+        public void SuccessfullyExitX() {
             this.DialogResult = DialogResult.OK;
             Close();
         }

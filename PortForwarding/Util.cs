@@ -143,6 +143,10 @@ namespace Poderosa.PortForwarding {
         public static string GetProfileStatusString(ChannelProfile prof) {
             return Env.Strings.GetString(Env.Connections.IsConnected(prof) ? "Caption.Util.Connected" : "Caption.Util.Disconnected");
         }
+        public static Color GetProfileStatusColor(ChannelProfile prof)
+        {
+            return Env.Connections.IsConnected(prof) ? Color.GreenYellow : Color.White;
+        }
 
         public static IPAddress ResolveHost(string hostname) {
             try {

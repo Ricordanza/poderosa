@@ -527,4 +527,10 @@
   <data name="String1Form.ProfileEdit._nameLabel" xml:space="preserve">
     <value>Name</value>
   </data>
+  <data name="Form.ProfileEdit._authGroup" xml:space="preserve">
+    <value>Auth</value>
+  </data>
+  <data name="Form.ProfileEdit._noAuth" xml:space="preserve">
+    <value>Use Auth</value>
+  </data>
 </root>

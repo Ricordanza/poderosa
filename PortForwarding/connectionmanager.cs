@@ -33,12 +33,33 @@ namespace Poderosa.PortForwarding {
                 return c;
 
             SSHShortcutLoginDialog dlg = new SSHShortcutLoginDialog(prof);
-            if (dlg.ShowDialog(parent) == DialogResult.OK) {
+            DialogResult result = DialogResult.No;
+
+            //認証設定がない場合はそのまま接続
+            if (!prof.Auth)
+            {
+                // 疑似的にOKボタン押下
+                dlg.OnOK(null, EventArgs.Empty);
+                // 非同期で接続が行われるので1秒待つ
+                System.Threading.Thread.Sleep(1000);
+                result = DialogResult.OK;
+            }
+            // 認証が必要な場合
+            else
+            {
+                // ダイアログによるユーザ認証
+                result = dlg.ShowDialog(parent);
+            }
+
+            if (result == DialogResult.OK)
+            {
                 c = dlg.Result.Connection;
-                try {
+                try
+                {
                     dlg.Result.WaitRequest();
                 }
-                catch (Exception ex) {
+                catch (Exception ex)
+                {
                     Debug.WriteLine(ex.StackTrace);
                     Util.Warning(parent, ex.Message);
                     c.Close();

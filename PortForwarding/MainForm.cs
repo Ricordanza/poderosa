@@ -280,7 +280,7 @@ namespace Poderosa.PortForwarding {
             // MainForm
             // 
             this.AutoScaleBaseSize = new System.Drawing.Size(5, 12);
-            this.ClientSize = new System.Drawing.Size(520, 345);
+            this.ClientSize = new System.Drawing.Size(550, 400);
             this.Controls.Add(this._list);
             this.Controls.Add(_mainMenu);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -499,7 +499,10 @@ namespace Poderosa.PortForwarding {
         public void RefreshProfileStatus(ChannelProfile prof) {
             ListViewItem li = FindItem(prof);
             Debug.Assert(li != null);
-            li.SubItems[6].Text = Util.GetProfileStatusString(prof);
+            li.SubItems[7].Text = Util.GetProfileStatusString(prof);
+
+            // 先頭サブアイテムの背景色を指定
+            li.BackColor = Util.GetProfileStatusColor(prof);
         }
 
         private ListViewItem FindItem(ChannelProfile prof) {
